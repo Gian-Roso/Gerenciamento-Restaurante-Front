@@ -9,7 +9,8 @@ const axiosInstance = axios.create({
 
 export const getCardapio = async (cardapio) => {
     try {
-        const response = await axiosInstance.get(`/Cardapio`, { params: cardapio });
+        const response = await axiosInstance.get(`/cardapio`, { params: cardapio });
+        console.log(response.data)
         return response.data;
     } catch (error) {
         console.error("Erro ao buscar o cardápio:", error);
